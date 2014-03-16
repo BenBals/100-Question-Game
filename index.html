@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <script src="jquery-2.1.0.min.js"></script>
+</head>
+<body>
+	<div id="body">
+	<div id="inbody">
+	<div id="question0">
+		<h1>
+			WELCOME TO THE 100 QUESTION GAME!
+		</h1>
+		<h2 id="go" style="color:pink">
+			Lets GO!
+		</h2>
+		<p>
+			by strawberry studios
+		</p><br>
+		<button id="Entwicklermist" onclick="showCheats();">Entwicklermist</button>
+		<div id="DevCodes" style="display:none;">
+			<p>Secret Code:</p>
+			<input type="text" id="checkCode">
+			<p>Zu welcher Frage?</p>
+			<input type="text" id="questionWish">
+			<p>Und wie viele Punkte?</p>
+			<input type="text" id="pointsWish"><br>
+			<button onclick="checkTheCode()">CheckIt</button>
+		</div>
+
+	</div>
+
+	<div id="versionLog" style="display:none;">
+		<h3>100 Question Game Version 0.5.1</h3>
+		<br>
+		<p>Im 0.5.1 Update wurden hinzugef&uuml;gt:</p><br>
+		<p>-10 neue Fragen</p>
+		<p>-Das Version Log</p>
+		<p>-Gr&ouml;&szlig;erer Zeilenabstand zwischen den Antwortmöglichkeiten</p><br>
+		<a href="http://100questiongame.tk">Zurück zur Startseite</a>
+	</div>
+
+	<div id="question1" style="display:none;">
+		<h3>
+			Von wo aus kann man nur nach S&uuml;den gehen?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Nordpol</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">S&uuml;dpol</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">&Auml;quator</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Bayern</a> <br> <br>
+	</div>
+
+	<div id="question2" style="display:none;">
+		<h3>
+			Was ist am teuersten?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Diamant</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Platin</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Gold</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Osmium</a> <br> <br> <!--Richtig-->
+	</div>
+
+	<div id="question3" style="display:none;">
+		<h3>
+			Wof&uuml;r steht HTML?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Hyper Text Multiple Language</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Hyper Text Markup Language</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Hydrotecinmultiliquid</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Hype The Mother (a)lLong</a> <br> <br>
+	</div>
+
+	<div id="question4" style="display:none;">
+		<h3>
+			Welche Farbe h&auml;tte Cola ohne Farbstoffe?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Gelb</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Erdbraun</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Gr&uuml;n</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">T&uuml;rkis</a> <br> <br>
+	</div>
+
+	<div id="question5" style="display:none;">
+		<h3>
+			Wof&uuml;r steht das DC in Washington DC?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Demanding Company</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Departman Central</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">District of Columbia</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Deutsche Kolonie<a/> <br>
+	</div>
+
+	<div id="question6"style="display:none;">
+		<h3>
+			Wie lautet die Relativit&auml;tstheorie?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">E=mc</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">E=mc^2</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">E=cm^2</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">M=ec^2</a> <br> <br>
+		<p>Tipp: ^2 steht f&uuml;r hoch 2</p>
+	</div>
+
+	<div id="question7" style="display:none;">
+		<h3>
+			Wie ist die Abk&uuml;rzung f&uuml;r Deutschland laut internationalem L&auml;ndercode?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">DE</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">GER</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">DEU</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">BRD</a> <br> <br>
+	</div>
+
+	<div id="question8" style="display:none;">
+		<h3>
+			Was ist KEIN Kontinent
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Arktis</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Antarktika</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Nordamerika</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Asien</a> <br> <br>
+	</div>
+
+	<div id="question9" style="display:none;">
+		<h3>
+			Wie hei&szlig;t die Hauptstadt von Uganda?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Bujumbura</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Kampala</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Nairobi</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Fizi</a> <br> <br>
+	</div>
+
+	<div id="question10" style="display:none;">
+		<h3>
+			Er hat ein knall rotes?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Hausboot</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Gummiboot</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Stehklo</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Gummib&auml;rchen</a> <br> <br>
+	</div>
+
+	<div id="question11" style="display:none;">
+		<h3>
+			Welcher Spieler hatte Ende 2013 die meisten Major-Tuniere (Golf) gewonnen?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Gary Player</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Phil Mickelson</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Dominik Antrich</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Jack Nicklaus</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Tiger Woods</a> <br> <br>
+	</div>
+
+	<div id="question12" style="display:none;">
+		<h3>
+			Was ist kein Grundbed&uuml;rfnis?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Wohnraum</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Soziale Kontakte</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Medizinische Versorgung</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Ern&auml;hrung</a> <br> <br>
+	</div>
+	
+	<div id="question13" style="display:none;">
+		<h3>
+			Welcher Staat hat die meisten Schulden im Vergleich zum BIP?
+		</h3>
+		<br>
+		<br>
+		<a href="#"onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Japan</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;" >USA</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">China</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Deutschland</a> <br> <br>
+		<p>Tip: BIP steht f&uuml;r Bruttoinlandsprodukt</p>
+	</div>
+
+	<div id="question14" style="display:none;">
+		<h3>
+			Welches Land hat die gr&ouml;&szlig; Armee? (Inklusive Reservisten)
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">USA</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">China</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Nordkorea</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Russland</a> <br> <br>
+	</div>
+
+	<div id="question15" style="display:none;">
+		<h3>
+			Ab welchem Durchschnittseikommen/Person-Wert gilt ein Land als Entwicklungsland?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">200$</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">1000$</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">10000$</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">3000$</a> <br> <br> <!--Richtig-->
+	</div>
+	
+	<div id="question16" style="display:none;">
+		<h3>
+			Was ist die 50-Cent-Army?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Chinesische Internetkontrolleure</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Die Fans des Rappers 50Cent</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Ein Team bei den Hot-Dog-Ess-Weltmeisterschaften</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Eine Miliz bei Call of Duty Ghosts</a> <br> <br>
+	</div>
+	
+	<div id="question17" style="display:none;">
+		<h3>
+			Wie ist der Slogan des Fernsehsenders USA Network?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Hello USA</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Best Series</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Characters Welcome</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">TV for the USA</a> <br> <br>
+	</div>
+	
+	<div id="question18" style="display:none;">
+		<h3>
+			Welche Aufl&ouml;ung hat Full-HD?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">4000px mal 3000px</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">1920px mal 1080px</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">1280px mal 720px</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">600px mal 360px<a/> <br>
+		<p>Tip: px ist die Abk&uuml;rzung f&uuml;r Pixel.</p>
+	</div>
+	
+	<div id="question19" style="display:none;">
+		<h3>
+			Wof&uuml;r steht HD?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">High Defelction</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">High Definition</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Hohe Dichte (der Pixel)</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Hoher Definitionsbereich</a> <br> <br>
+	</div>
+	
+	<div id="question20" style="display:none;">
+		<h3>
+			Wie gro&szlig; ist das BIP der USA?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Ca 7,5 Billionen $US</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">ca 150 Miliarden $US</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">ca 150 Millionen $US</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">ca 15 Billionen $US</a> <br> <br> <!--Richtig-->
+	</div>
+
+	<div id="question21" style="display:none;">
+		<h3>
+			Was ist das &auml;rmste Land der Welt? (Geringstes BIP/person)
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Uganda</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Somalia</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Tailand</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Lybien</a> <br> <br>
+	</div>
+
+	<div id="question22" style="display:none;">
+		<h3>
+			Salsa ist Spanisch. Was ist die korrekte &Uuml;berstzung?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Scharf</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Sauce</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Schneller Tanz</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Zukunft</a> <br> <br>
+	</div>
+
+	<div id="question23" style="display:none;">
+		<h3>
+			Welche Universit&auml;t besuchte der jetzige US Pr&auml;stident Barack Obama?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Stanford</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Yale</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Princeton</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Harvard</a> <br> <br> <!--Richtig-->
+	</div>
+
+	<div id="question24" style="display:none;">
+		<h3>
+			Was ist B&uuml;singen am Hochrhein?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Der westlichste Ort Deutschlands</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Der Ort in dem das Bier erfunden wurde</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Die einzige deutsche Exklave</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Der Hauptsitz von Arte</a> <br> <br>
+	</div>
+
+	<div id="question25" style="display:none;">
+		<h3>
+			Welches ist das gr&ouml;&szlig;te Land der Welt?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Russland</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">USA</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">China</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Antarktikan</a> <br> <br>
+	</div>
+
+	<div id="question26" style="display:none;">
+		<h3>
+			Wie gro&szlig; ist die Fl&auml;che dieses Landes?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">7.098.246 Quadratkilometer</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">17.098.246 Quadratkilometer</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">1.098.246 Quadratkilometer</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">177.098.246 Quadratkilometer</a> <br> <br>
+	</div>
+
+	<div id="question27" style="display:none;">
+		<h3>
+			Wie ist der zweite Vorname von Wladimir Putin?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Bratwa</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Alexander</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Sergey</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Wladimirowitsch</a> <br> <br> <!--Richtig-->
+	</div>
+
+	<div id="question28" style="display:none;">
+		<h3>
+			Wie lautet die 40000. Stelle von &pi; (Das hei&szlig;t pi und &pi;=3,1415926535897)?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">12</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">5</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">1</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">6</a> <br> <br>
+		<br>
+		<p>Tip: Das wurde in der 21. Folge der 4. Staffel der Simpsons wird das gesagt. xD</p>
+	</div>
+
+	<div id="question29" style="display:none;">
+		<h3>
+			Was war die RichtigeAntwort auf Frage 7?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Die 1.</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Die 2.</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Die 3.</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Die 4.</a> <br> <br>
+	</div>
+
+	<div id="question30" style="display:none;">
+		<h3>
+			Wie hei&szlig;t einer der Charktere aus Suits?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Harvay Spector</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Harvey Spector</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Harvay Specter</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Harvey Specter</a> <br> <br> <!--Richtig-->
+	</div>
+
+	<div id="question31" style="display:none;">
+		<h3>
+			Wer ist kein Golfer?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Rorey MacIlroy</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Adam Scott</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Justin Rose</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Jordan Spieth</a> <br> <br>
+	</div>
+
+	<div id="question32" style="display:none;">
+		<h3>
+			Wie war &pi; nochmal (Das wurde in Frage 28 bis zur 13. Stelle nach dem Komma gesagt)?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">3,1415926555898</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">3,1415926535898</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">3,1415926535897</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">3,1415926535899</a> <br> <br>
+		<br>
+	</div>
+
+	<div id="question33" style="display:none;">
+		<h3>
+			Die Lichtstrahlen welcher Farbe sind am k&uuml;rzesten?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Blau</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Gr&uuml;n</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Rot</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Gelb</a> <br> <br>
+	</div>
+	
+	<div id="question34" style="display:none;">
+		<h3>
+			Wegen welcher Behauptung bestrafte die Katholische Kirche Galileo Galilei?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Der Papst darf keinen Staat regieren</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Es gibt 2 G&ouml;tter</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Die Erde dreht sich um die Sonne</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Die Sonne ist das Zentrum des Universums</a> <br> <br>
+	</div>
+	
+		<div id="question35" style="display:none;">
+		<h3>
+			Wie hei&szlig;t die Hauptfigur aus HalfLife?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Gordon Freeman</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Morgan Freeman</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Jordan Freeman</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Walter Breen</a> <br> <br>
+	</div>
+	
+	<div id="question36" style="display:none;">
+		<h3>
+			Wof&uuml;r steht J.A.R.V.I.S?
+		</h3>
+		<h5>Ich meine den Sprachcomputer aus den Filmen und nicht den Butler aus den Comics</h5>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Das ist ein Vorname</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Just A Rather Very Itelligent System</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">John Arther Rees Virtual Intel System</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Es gibt keinen Sinn das kommt nur weil der Buttler in den Comics so heißt</a> <br> <br>
+	</div>
+	
+	<div id="question37" style="display:none;">
+		<h3>
+			Was war das erfolgreichste Buch von Dan Brown?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Illuminati</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Sakrileg</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Diabolo</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Meteor</a> <br> <br>
+	</div>
+	
+	<div id="question38" style="display:none;">
+		<h3>
+			Wie hieß das erste geklonte S&auml;ugetier?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Tolly</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Holly</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Molly</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Dolly</a> <br> <br> <!--Richtig-->
+	</div>
+	
+    <div id="question39" style="display:none;">
+		<h3>
+			Wofür steht HP?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Hewlett-Packard</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Hardware-Packard</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Home-Printer</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Henry-Printer</a> <br> <br>
+	</div>
+	
+	<div id="question40" style="display:none;">
+		<h3>
+			Wie hei&szlig;t die Hauptstadt des US-Bundesstaates Alabama?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Hartford</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Sacramento</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Montgomery</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Phoenix</a> <br> <br>
+	</div>
+	
+    <div id="question41" style="display:none;">
+		<h3>
+			Aus welchem Land kommt der Mossad?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">USA</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Israel</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Chile</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">China</a> <br> <br>
+	</div>
+        
+    <div id="question42" style="display:none;">
+		<h3>
+			Wer war der erste Präsident der USA?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">George Washington</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">George Lukas</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Abraham Lincoln</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Abraham Baxter</a> <br> <br>
+	</div>
+        
+    <div id="question43" style="display:none;">
+		<h3>
+			Wie heißt die Hauptstadt von Panama?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Tegucigalpa</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Santiago</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">La Habanna</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Panama</a> <br> <br> <!--Richtig-->
+	</div>
+    
+    <div id="question44" style="display:none;">
+		<h3>
+			Was ist die meistbefahrene künstliche Wasserstaße der Welt?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Missisppi-Montesouri-Straße</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Nord-Ost-See-Kanal</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Panama Kanal</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Rhein-Elbe-Staße</a> <br> <br>
+	</div>    
+    
+    <div id="question45" style="display:none;">
+		<h3>
+			Was ist der häufigste Name in den USA?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Dwayne</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Lee</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Steve</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Michael</a> <br> <br> <!--Richtig-->
+	</div>
+        
+    <div id="question46" style="display:none;">
+		<h3>
+			Wie hieß die Sekretärin von John Fitzgerald Kennedy mit Nachnamen?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Lincoln</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Johnson</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Eisenhower</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Washington</a> <br> <br>
+	</div>
+        
+    <div id="question47" style="display:none;">
+		<h3>
+			Wie heißt die Hauptstadt von Kanada?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Ottawa</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Toronto</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Vancouver</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Washington</a> <br> <br>
+	</div>
+
+        <div id="question48" style="display:none;">
+		<h3>
+			Wie groß ist die Erdoberfäche? (in Quadratkilometern)
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">510.000.000.000</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">510.000.000</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">5.100.000.000</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">51.000.000</a> <br> <br>
+	</div> 
+    
+     <div id="question49" style="display:none;">
+		<h3>
+			Was ist keine US-Organ?
+		</h3>
+		<br>
+		<br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">CIA</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">NRO</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">MCIA</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">FSB</a> <br> <br> <!--Richtig-->
+	</div>
+        
+    <div id="question50" style="display:none;">
+		<h3>
+			Wie heißt die aktuelle Mac OS X Version?
+		</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Mavericks</a> <br> <br> <!--Richtig-->
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Mountain Lion</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Lion</a> <br> <br>
+		<a class="wrong" onclick="wrongAnswer(this); this.onclick=null;">Snow Leopad</a> <br> <br>
+	</div>
+    
+	<div id="question51" style="display:none;">
+		<h3>Was stellte Sony ursprünglich her?</h3>
+		<br>
+		<br>
+		<a href="http://100questiongame.tk" class="wrong">Saure Gurken</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">Rasenmäher</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Reiskocher</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">Computer</a> <br> <br>
+	</div>
+	<div id="question52" style="display:none;">
+		<h3>Wie heißt die Krim auf Englisch</h3>
+		<br>
+		<br>
+		<a href="http://100questiongame.tk" class="wrong">Crim</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Crimea</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">Chrim</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">Chrema</a> <br> <br>
+	</div>
+	<div id="question53" style="display:none;">
+		<h3>Wie heißt der aktuelle SecDef</h3>
+		<br>
+		<br>
+		<a href="http://100questiongame.tk" class="wrong">Lord Wilson von Wales</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">Barrack Obama</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">John Kerry</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Chuck Hagel</a> <br> <br> <!--Richtig-->
+	</div>
+	<div id="question54" style="display:none;">
+		<h3>Und wie heßt der aktuelle Commander in Chief der US-Steitkräfte</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Barrack Obama</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">Keith Alexander</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">John Owen Brennan</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">Stacya Hilton</a> <br> <br>
+	</div>
+	<div id="question55" style="display:none;">
+		<h3>Wer hat noch keinen Academy Award?</h3>
+		<br>
+		<br>
+		<a href="http://100questiongame.tk" class="wrong">Jared Leto</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">Cate Blanchett</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Leonardo DiCaprio</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">Matthew McConaughey</a> <br> <br>
+	</div>
+	<div id="question56" style="display:none;">
+		<h3>Wer spielt den Haputcharakter Neal Caffrey in White Collar?</h3>
+		<br>
+		<br>
+		<a href="http://100questiongame.tk" class="wrong">Willie Garson</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">Matthew McConaughey</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">Tim DeKay</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Matt Bomer</a> <br> <br> <!--Richtig-->
+	</div>
+	<div id="question57" style="display:none;">
+		<h3>Und wer von denen spielt da nicht mit?</h3>
+		<br>
+		<br>
+		<a href="http://100questiongame.tk" class="wrong">Willie Garson</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Matthew McConaughey</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">Tim DeKay</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">Matt Bomer</a> <br> <br>
+	</div>
+	<div id="question58" style="display:none;">
+		<h3>Was heißt video auf Deutsch?</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Ich sehe</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">Du siehst</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">Er sieht</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">Wir sehen</a> <br> <br>
+	</div>
+	<div id="question59" style="display:none;">
+		<h3>Wie viele kostete Whatsapp?</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">1,37E10 Euro</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">11,42E9 Pound</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">1,92E12 Yen</a> <br> <br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">2,1E10 Australische Dollar</a> <br> <br>
+	</div>
+	<div id="question60" style="display:none;">
+		<a id="seePoints" href="#">Wie viele Punkte habe ich?</a><br>
+		<a href="/index.html">NOCHMAL!</a>
+	</div>
+	<div id="question61" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question62" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question63" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question64" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question65" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question66" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question67" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question68" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question69" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question70" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question71" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question72" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question73" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question74" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question75" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question76" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question77" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question78" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question79" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question80" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question81" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question82" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question83" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question84" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question85" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question86" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question87" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question88" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question89" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question90" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question91" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question92" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question93" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question94" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question95" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question96" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question97" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question98" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question99" style="display:none;">
+		<h3></h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">RichtigeAntwort</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+		<a href="http://100questiongame.tk" class="wrong">FalscheAntwort</a> <br> <br>
+	</div>
+	<div id="question100" style="display:none;">
+		<h3>Ja oder Nein?</h3>
+		<br>
+		<br>
+		<a onclick="rightAnswer(this); this.onclick=null;" class="right" class="right" href="#">Ja</a> <br> <br> <!--Richtig-->
+		<a href="http://100questiongame.tk" class="wrong">Nein</a> <br> <br>
+	</div>
+
+    <div id="question101" style="display:none;">
+        <h2>DU HAST ES GESCHAFFT!</h2>
+        <p>Wir hoffen du hattest Spaß beim Spielen und bist nicht zu oft ausgerastet. ;)</p>
+    </div>
+        
+	<script type="text/javascript" src="javascript.js"></script>
+	</div>
+	</div>
+</body>
